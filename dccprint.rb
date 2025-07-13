@@ -10,7 +10,7 @@ class Dccprint < Formula
   on_macos do
     on_intel do
       url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Darwin_x86_64.tar.gz"
-      sha256 "2bcf54f173665765f36d793cc9a65fca43d069e1fb5b6d68f1e2cdabad0547c4"
+      sha256 "2800f23c7b3a436d96d702d18f3c08d8867413df1394a4342cc62431b7d0525c"
 
       def install
         bin.install "dccprint"
@@ -18,7 +18,7 @@ class Dccprint < Formula
     end
     on_arm do
       url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Darwin_arm64.tar.gz"
-      sha256 "b686851c1f8c8c290115ea373d47eb8fc3bcb0468164162547558ff931480cd0"
+      sha256 "008ac9e717d657c8cc29847d1532148f80209522dfd9e0547ff33ae123ba7e8a"
 
       def install
         bin.install "dccprint"
@@ -30,7 +30,7 @@ class Dccprint < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Linux_x86_64.tar.gz"
-        sha256 "4334d534a5a337c275876f9746bc834fb65cf25af4f10acd1b4b36fcca845e82"
+        sha256 "7aa7ee3e6b41d72380e70bb39b82bf7ef9f82e22913cef54f6561907d069cd41"
 
         def install
           bin.install "dccprint"
@@ -40,7 +40,7 @@ class Dccprint < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Linux_arm64.tar.gz"
-        sha256 "80f82e91bbc40466082676f3e4cecf8370747694b844dae8ea3e50d2284ba2a6"
+        sha256 "3ab93f094827e31de8e06ebba47b5983f21631a9d963155b711fed51d2067b44"
 
         def install
           bin.install "dccprint"
