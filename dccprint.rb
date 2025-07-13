@@ -5,20 +5,20 @@
 class Dccprint < Formula
   desc "Una herramienta TUI paraa imprimir archivos en el DCC."
   homepage "https://github.com/fgonzalezurriola/dccprint"
-  version "0.1.12"
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.12/dccprint_Darwin_x86_64.tar.gz"
-      sha256 "490508d7c1f433b93c26e2cec4b988ed34bd0b8554115c30bf1133071f66b73a"
+      url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Darwin_x86_64.tar.gz"
+      sha256 "e9422d028ad585e59e0cd24f0db5337fd8ef8f618a756cb005e85a733526786b"
 
       def install
         bin.install "dccprint"
       end
     end
     on_arm do
-      url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.12/dccprint_Darwin_arm64.tar.gz"
-      sha256 "9e5fadeec756cb911cf0b7499372daf0e15365cb957c8a1e648e06434c612ca5"
+      url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Darwin_arm64.tar.gz"
+      sha256 "06ee11ec9b6907ab015e11096509fdd5f5619db887a2b6f239135e8cf2ca66cc"
 
       def install
         bin.install "dccprint"
@@ -29,8 +29,8 @@ class Dccprint < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.12/dccprint_Linux_x86_64.tar.gz"
-        sha256 "98afb20aabb93ed147643695d1362677109f9a36b3ebd4b2428b4cb1dbc18352"
+        url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Linux_x86_64.tar.gz"
+        sha256 "4602fbdc813392fb18db3a6fbadf3319c3600a2f82c48b7731dfce9b6cfc02b6"
 
         def install
           bin.install "dccprint"
@@ -39,8 +39,8 @@ class Dccprint < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.12/dccprint_Linux_arm64.tar.gz"
-        sha256 "f27fa7da194b921125d5c029b7b7e0c4dc0ee1e6389098eeba95ed8adb8ae5ae"
+        url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.1/dccprint_Linux_arm64.tar.gz"
+        sha256 "540997c13a21173a1c50fe57948fd55c6e963fb79aee22cc97bf002fdd81c7c6"
 
         def install
           bin.install "dccprint"
