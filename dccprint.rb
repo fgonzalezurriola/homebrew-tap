@@ -8,17 +8,17 @@ class Dccprint < Formula
   version "0.1.5"
 
   on_macos do
-    if Hardware::CPU.intel?
+    on_intel do
       url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.5/dccprint_Darwin_x86_64.tar.gz"
-      sha256 "ad2d6f207dee4a9d50f7e74da3f5ab2ca6a40d6ba78a542ad113c844a57f0e96"
+      sha256 "3f63fe6ab710336d50f4fa98986db82015636a4465b89ed8489bc7be7616e94b"
 
       def install
         bin.install "dccprint"
       end
     end
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.5/dccprint_Darwin_arm64.tar.gz"
-      sha256 "b5f32c2a99972dd16d7c7dd06bc0481156453858801aed21a244512561c8e4f4"
+      sha256 "94427d8173a91b15dd49d2992ad82859d737804fbf9b0b9ec6b826a318819eb8"
 
       def install
         bin.install "dccprint"
@@ -27,18 +27,24 @@ class Dccprint < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.5/dccprint_Linux_x86_64.tar.gz"
-      sha256 "f71385f5023c7be8d4a7695c4ebfd08a5c660c1bdca0693a272971f83182df03"
-      def install
-        bin.install "dccprint"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.5/dccprint_Linux_x86_64.tar.gz"
+        sha256 "b6ff0eb5ae1969bde68d3a99bdf18d8acc39952e33d403652a6e58f3b20307cb"
+
+        def install
+          bin.install "dccprint"
+        end
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.5/dccprint_Linux_arm64.tar.gz"
-      sha256 "33e6de9a2325723630e118159c3aa5a26fdbea211d816314c238c305e9a8931d"
-      def install
-        bin.install "dccprint"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fgonzalezurriola/dccprint/releases/download/v0.1.5/dccprint_Linux_arm64.tar.gz"
+        sha256 "7646f36b72163876e3518e327e110ade565baaadb3aa5e78e128493c44f06d83"
+
+        def install
+          bin.install "dccprint"
+        end
       end
     end
   end
